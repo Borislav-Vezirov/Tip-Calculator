@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-dark text-white">
+    <div class="container rounded-bottom mt-5 col-sm-6">
+        <div class="nav navbar bg-success text-white rounded-top"><span class="navText mx-auto">Tip Calculator
+            </span>
+        </div>
+        <form id="form" class="form-group p-5 bg-secondary mx-auto mb-0">
+            <label id="label" for="bill">How Much Was Your Bill ?</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-euro-sign"></i></span>
+                </div>
+                <input type="number" class="form-control" id="bill" step="0.1">
+            </div>
+            <label for="sharingPeople">How Many People Sharing The Bill ?</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user-friends"></i></span>
+                </div>
+                <input type="number" class="form-control" id="sharingPeople">
+            </div>
+            <label for="service">How Was Your Service ?</label>
+            <div class="input-group mb-3">
+                <select id="service" class="form-control w-100">
+                    <option selected value="0">Choose...</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary form-control mt-3">Calculate</button>
+        </form>
+        <div class="img-container text-center">
+            <div class="col-sm-12 img-container bg-secondary">
+                <img src="images/200.gif" alt="loader" id="img">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 mx-auto result">
+                <table class="table bg-secondary">
+                    <tr>
+                        <th class="col-sm-6">Tip Amount</th>
+                        <th class="col-sm-6"><span id="tipAmount"></span><span>&euro;</span></th>
+                    </tr>
+                    <tr>
+                        <th>Total Amount</th>
+                        <th><span id="totalAmount"></span><span>&euro;</span></th>
+                    </tr>
+                    <tr>
+                        <th>Each Person Owes</th>
+                        <th><span id="personOwes"></span><span>&euro;</span></th>
+                    </tr>
+                </table>
+                <button type="reset" class="btn btn-outline-secondary form-control mt-1" onclick="window.location.reload()">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
